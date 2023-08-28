@@ -4,20 +4,22 @@ img{
 }
 .right{
     float: right;
-    margin-right: 28%; ;
+    margin-right: 17%; ;
 
 }
 .left{
     float: left;
-    margin-left: 25%;
+    margin-left: 20%;
 }
-h1{ background-color: rgb(8, 113, 178);
-    border: 30px;
+h1{ background-color:#3780AA;
+    border: 35px;
     color:white;
     border-radius: 10px;
-    margin-left: 17%;
+    margin-left: 15%;
     padding: 10px 0 10px 10px;
-    margin-right: 10%;
+    margin-right: 8%;
+    font-size: 70%;
+    font-weight: bold;
 
 }
 
@@ -36,16 +38,9 @@ h1{ background-color: rgb(8, 113, 178);
     /* background-color: rgb(222, 219, 225); */
     border-radius: 10px;
 }
-.petit-enfant{
+
+.rec-enfant1{
     width: 200px;
-    height: 20px;
-    /* border: 2px solid gray; */
-    background-color: #B6A2DF;
-    border-radius: 10px;
-    
-}
-.petit-enfant{
-    width: 210px;
     height: 20px;
     /* border: 2px solid gray; */
     background-color: #B6A2DF;
@@ -91,4 +86,10 @@ h1{ background-color: rgb(8, 113, 178);
     background-color: #F2B771;
     border-radius: 10px;
     
+}
+h2{
+    font-size: 100%;
+}
+h3{
+    font-size: 120%;
 }
