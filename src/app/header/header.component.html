@@ -1,3 +1,19 @@
-<div class="header">
-    
-</div>
+
+<div class="header" [ngClass]="getHeaderClass()">
+    <nav class="navbar">
+        <div class="">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Competences, professionnels..." aria-label="Search">
+                <button class="button" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="profil">
+            <a class="navbar-brand" href="#">
+            Mohamed Diarra
+              <img src="assets/images/med.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center">
+            </a>
+          </div>
+
+     </nav>
+   </div>
+ 

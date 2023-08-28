@@ -9,6 +9,7 @@ import { ProfilUtilisateurComponent } from './profil-utilisateur/profil-utilisat
 import { GestionCompetencesComponent } from './gestion-competences/gestion-competences.component';
 import { RechercheProfessionnelsComponent } from './recherche-professionnels/recherche-professionnels.component';
 import { BodyComponent } from './body/body.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BodyComponent } from './body/body.component';
     ProfilUtilisateurComponent,
     GestionCompetencesComponent,
     RechercheProfessionnelsComponent,
-    BodyComponent
+    BodyComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

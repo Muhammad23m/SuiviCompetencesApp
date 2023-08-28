@@ -1,1 +1,9 @@
  <app-side-bar> (ontoggleSlideNav)="ontoggleSlideNav($event)" </app-side-bar>
+ <app-header
+ [collapsed]= "isSideNavCollapsed"
+ [screenWidth]="screenWidth"
+ ></app-header>
+ <app-body 
+ [collapsed]= "isSideNavCollapsed"
+ [screenWidth]="screenWidth"
+ ></app-body>
