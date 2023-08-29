@@ -10,6 +10,7 @@ import { GestionCompetencesComponent } from './gestion-competences/gestion-compe
 import { RechercheProfessionnelsComponent } from './recherche-professionnels/recherche-professionnels.component';
 import { BodyComponent } from './body/body.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ProfileProComponent } from './profile-pro/profile-pro.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     GestionCompetencesComponent,
     RechercheProfessionnelsComponent,
     BodyComponent,
-    AccueilComponent
+    AccueilComponent,
+    ProfileProComponent
   ],
   imports: [
     BrowserModule,
