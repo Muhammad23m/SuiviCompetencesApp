@@ -29,8 +29,8 @@
               "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "src/assets/custom-tabs.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              
             ]            
           },
           "configurations": {
