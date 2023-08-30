@@ -33,7 +33,7 @@ h1{ background-color:#3780AA;
 
 .rect-parent{
     width: 250px;
-    height: 20px;
+    height: 15px;
     border: 2px solid gray;
     /* background-color: rgb(222, 219, 225); */
     border-radius: 10px;
@@ -41,7 +41,7 @@ h1{ background-color:#3780AA;
 
 .rec-enfant1{
     width: 200px;
-    height: 20px;
+    height: 15px;
     /* border: 2px solid gray; */
     background-color: #B6A2DF;
     border-radius: 10px;
@@ -49,7 +49,7 @@ h1{ background-color:#3780AA;
 }
 .rec-enfant2{
     width: 200px;
-    height: 20px;
+    height: 15px;
     /* border: 2px solid gray; */
     background-color: #93E1B2;
     border-radius: 10px;
@@ -57,7 +57,7 @@ h1{ background-color:#3780AA;
 }
 .rec-enfant3{
     width: 200px;
-    height: 20px;
+    height: 15px;
     /* border: 2px solid gray; */
     background-color: #E7D486;
     border-radius: 10px;
@@ -73,7 +73,7 @@ h1{ background-color:#3780AA;
 }
 .rec-enfant4{
     width: 200px;
-    height: 20px;
+    height: 15px;
     /* border: 2px solid gray; */
     background-color: #E98C9D;
     border-radius: 10px;
@@ -81,7 +81,7 @@ h1{ background-color:#3780AA;
 }
 .rec-enfant5{
     width: 200px;
-    height: 20px;
+    height: 15px;
     /* border: 2px solid gray; */
     background-color: #F2B771;
     border-radius: 10px;

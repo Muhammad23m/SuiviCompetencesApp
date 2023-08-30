@@ -7,7 +7,7 @@ import { GestionCompetencesComponent } from './gestion-competences/gestion-compe
 import { ProfileProComponent } from './profile-pro/profile-pro.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'accueil', pathMatch: 'full'},
+  // {path: '', redirectTo: 'accueil', pathMatch: 'full'},
   {path: 'accueil', component: AccueilComponent},
   {path: 'profil-utilisateur', component: ProfilUtilisateurComponent},
   {path: 'recherche-professionels', component: RechercheProfessionnelsComponent},
