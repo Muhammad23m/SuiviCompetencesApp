@@ -1,21 +1,127 @@
 
-<h1>PROFILE COMPETENCES</h1>
-<div class="tab">
-    <div class="tab-left">
+<h1>Liste des compétences</h1>
+
+<div class="container">
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Niveau</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let competence of competences; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ competence.nom }}</td>
+          <td>{{ competence.niveau }}</td>
+          <td>
+            <button class="btn btn-primary edit" (click)="mettreAJourCompetence(competence)">Éditer</button>
+            <button class="btn btn-danger sup" (click)="supprimerCompetence(competence)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-success ajout" (click)="ouvrirModalAjouterCompetence(modalTemplate)">Ajouter</button>
+
+  <ng-template #modalTemplate>
+  <div class="modal-header">
+    <h4 class="modal-title">Ajouter une compétence</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="ajouterCompetence()">
+      <div class="form-group">
+        <label>Nom de la compétence</label>
+        <input [(ngModel)]="nouvelleCompetence.nom" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label>Niveau de la compétence</label>
+        <input [(ngModel)]="nouvelleCompetence.niveau" class="form-control" required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="ajouterCompetence()">Ajouter</button>
+        <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Annuler</button>
+      </div>      
+    </form>
+  </div>
+</ng-template>
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <!--
+        <div class="tab">
+        <div class="tab-left">
         <p class="category">Hello World!Hello World!</p>
         <p class="category">Hello World!</p>
         <p class="category">Hello World!</p>
         <p class="category">Hello World!</p>
         <p class="category">Hello World!</p>
     </div>
-    <div class="tab-right">
-        <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
-        <span>Competences</span>
-        <p class="skill">Hello World!</p>
-        <p class="skill">Hello World!Hello</p>
-        <p class="skill">Hello World!</p>
-        <p class="skill">Hello World!</p>
-        <p class="skill">Hello World!</p>
-     </div>
+    <div id="categories" class="tab-right">
+        <div id="category1" class="categorie show">
+            <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
+            <span>Competences1</span>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!Hello</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+        </div>
+        <div  class="categorie">
+            <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
+            <span>Competences2</span>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!Hello</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+        </div>
+        <div  class="categorie">
+            <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
+            <span>Competences3</span>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!Hello</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+        </div>
+        <div  class="categorie">
+            <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
+            <span>Competences4</span>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!Hello</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+        </div>
+        <div  class="categorie">
+            <img src="assets/images/BarChart.png" alt="" srcset="" width="20px">
+            <span>Competences5</span>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!Hello</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+            <p class="skill">Hello World!</p>
+        </div>
+     </div> -->
 <div>
    
