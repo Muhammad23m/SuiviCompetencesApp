@@ -11,54 +11,14 @@
         <p><i class="fa-solid fa-envelope-open-text"></i> Email</p>
     </div>
     <div class="right">
-        <h2><i class="fa-solid fa-chart-bar"></i>      COMPETENCES</h2>
-        <hr>
-        <p (click)="openModal(myModal)">HTML</p>
-        <div class="rect-parent">
-            <div class="rec-enfant1">
-                <div class="petit-enfant">
-                </div>
-            </div>
+      <h2>Compétences</h2>
+      <div *ngFor="let competence of competences" class="skill">
+        <div class="skill-name">{{ competence.nom }}</div>
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="getProgressBarWidth(competence.niveau)">
+            <div class="progress-label">{{ competence.niveau }}</div>
+          </div>
         </div>
-        <p>CSS</p>
-        <div class="rect-parent">
-            <div class="rec-enfant2"></div>
-        </div>
-        <p>JAVASCRIPT</p>
-        <div class="rect-parent">
-            <div class="rec-enfant3"></div>
-        </div>
-        <p>JAVA</p>
-        <div class="rect-parent">
-            <div class="rec-enfant4"></div>
-        </div>
-        <p>SQL</p>
-        <div class="rect-parent">
-            <div class="rec-enfant5"></div>
-        </div>
-    
-<!-- Utilisez 'ng-template' pour le contenu du modal -->
-<ng-template #myModal>
-  <div class="modal-header">
-    <button type="button" class="btn-close" (click)="modalRef.hide()" aria-label="Close"></button>
-  </div>
-  <div class="modal-body">
-    <form action="" method="post">
-    <div class="">
-        <input type="text" placeholder="HTML">
-    </div>
-    <div class="">
-        <input type="text" placeholder="Niveau en %">
-    </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Close</button>
-    <button type="button"  class="btn btn-primary">Save changes</button>
-  </div>
-</ng-template>
-
-
-
+     </div>
+   </div>
 </div>
-
