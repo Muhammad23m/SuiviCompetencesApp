@@ -31,6 +31,7 @@ export class ProfilUtilisateurComponent implements OnInit {
       this.authService.getUtilisateurConnecte().subscribe((utilisateur) => {
         this.utilisateur = utilisateur;
       });
+      console.log(this.utilisateur);
     }
   
     // Utilisez le service pour récupérer les compétences de l'utilisateur

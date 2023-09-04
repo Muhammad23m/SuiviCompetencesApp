@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
    // Méthode pour vérifier si l'utilisateur est connecté
    utilisateurEstConnecte(): boolean {
      // Utilisez la méthode du service d'authentification pour vérifier l'état de connexion
-     return this.authService.estConnecte();
+     return this.authService.utilisateurEstConnecte();
    }
  
    // Méthode de déconnexion

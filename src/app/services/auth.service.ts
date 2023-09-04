@@ -40,10 +40,9 @@ export class AuthService {
       this.utilisateurConnecteId = utilisateurTrouve.id;
       // Stockez l'utilisateur dans le localStorage
       localStorage.setItem('utilisateurConnecte', JSON.stringify(utilisateurTrouve));
-      // Après une connexion réussie
-      localStorage.setItem('utilisateurConnecte', 'true');
-
- 
+      // Stockez l'indicateur de connexion
+      localStorage.setItem('estConnecte', 'true');
+      
     } else {
       // Si l'utilisateur n'est pas trouvé, réinitialisez utilisateurConnecteId à null
       this.utilisateurConnecteId = null;
@@ -52,11 +51,9 @@ export class AuthService {
     return utilisateurTrouve || null; // Renvoie l'utilisateur trouvé ou null s'il n'est pas trouvé
   }
   
-  // Méthode pour vérifier si l'utilisateur est connecté
-  estConnecte(): boolean {
-      // Vérifiez si l'état de connexion existe dans le localStorage
-      const etatConnexion = localStorage.getItem('utilisateurConnecte');
-      return etatConnexion === 'true';
+  utilisateurEstConnecte(): boolean {
+    // Vérifiez si l'ID de l'utilisateur connecté est défini
+    return this.utilisateurConnecteId !== null;
   }
   //Récupérer les informations de l'utilisateur connecté
   utilisateurConnecte: Utilisateur | null = null;
@@ -84,8 +81,10 @@ export class AuthService {
 
 
   deconnexion(): void {
+   
     // Supprimez les informations de l'utilisateur connecté du local storage
-    localStorage.removeItem('utilisateurConnecte');
+     localStorage.removeItem('estConnecte');
+     localStorage.removeItem('utilisateur');
     // Redirigez l'utilisateur vers la page de connexion 
     this.router.navigate(['/connexion']);
   }

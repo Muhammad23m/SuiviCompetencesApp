@@ -3,11 +3,13 @@ import { Competence } from '../models/competence.model';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal'; // Assurez-vous que le chemin vers ngx-bootstrap est correct
 import { CompetenceService } from '../services/competence.service'; // Assurez-vous que le chemin vers le service est correct
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-gestion-competences',
   templateUrl: './gestion-competences.component.html',
-  styleUrls: ['./gestion-competences.component.css']
+  styleUrls: ['./gestion-competences.component.css'],
+ 
 })
 export class GestionCompetencesComponent implements OnInit {
   competences: Competence[] = [];
@@ -36,6 +38,7 @@ export class GestionCompetencesComponent implements OnInit {
       this.modalRef.hide();
     }
   }
+  
 
   mettreAJourCompetence(competence: Competence): void {
     this.competenceService.mettreAJourCompetence(competence);
