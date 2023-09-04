@@ -1,4 +1,6 @@
-export class Competence {
-    constructor(public id: number, public nom: string, public niveau: string) {}
-  }
-  
+// competence.model.ts
+export interface Competence {
+  id: any;
+  nom: string;
+  niveau: 'débutant' | 'junior' | 'senior' |''|string;
+}

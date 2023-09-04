@@ -1,0 +1,60 @@
+
+<h1>Liste des compétences</h1>
+
+<div class="container">
+    
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Niveau</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let competence of competences; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ competence.nom }}</td>
+          <td>{{ competence.niveau }}</td>
+          <td>
+            <button class="btn btn-primary edit" (click)="mettreAJourCompetence(competence)">Éditer</button>
+            <button class="btn btn-danger sup" (click)="supprimerCompetence(competence)">Supprimer</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="btn btn-success ajout" (click)="ouvrirModalAjouterCompetence(modalTemplate)">Ajouter</button>
+
+  <ng-template #modalTemplate>
+    <div class="modal-header">
+      <h4 class="modal-title">Ajouter une compétence</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form  (submit)="ajouterCompetence()" [formGroup]="nouvellComp">
+        <div class="form-group">
+          <label>Nom de la compétence</label>
+          <input formControlName="nom" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="niveau">Niveau de la compétence</label>
+          <select formControlName="niveau" class="form-control" required>
+            <option value="débutant">Débutant</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+          </select>
+        </div>        
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <button type="button" class="btn btn-secondary" (click)="modalRef.hide()">Annuler</button>
+        </div>      
+      </form>
+    </div>
+  </ng-template>
+
+<div>
+   

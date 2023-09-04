@@ -5,18 +5,18 @@ export const navbarData = [
     label:'Accueil'
 },
 {
+    routeLink: 'gestion-competences', 
+    icon:'fa fa-chart-bar',
+    label:'Mes Competences'
+},
+{
     routeLink: 'profil-utilisateur', 
     icon:'fa fa-user',
-    label:'Utilisateur'
+    label:'Mon Profil'
 },
 {
     routeLink: 'recherche-professionels', 
     icon:'fa fa-users',
-    label:'Professionels'
-},
-{
-    routeLink: 'gestion-competences', 
-    icon:'fa fa-chart-bar',
-    label:'Competences'
+    label:'Autres'
 }
 ];

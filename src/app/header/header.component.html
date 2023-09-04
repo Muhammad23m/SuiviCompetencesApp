@@ -1,10 +1,10 @@
 
-<div class="header" [ngClass]="getHeaderClass()">
+<div class="header">
     <nav class="navbar">
         <div class="">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Competences, professionnels..." aria-label="Search">
-                <img src="" alt="" srcset="">
+                <img src="assets\images\search.png" alt="" srcset="" width="30px" height="30px">
           </form>
         </div>
         <div class="profil">
@@ -12,7 +12,10 @@
             Mohamed Diarra
               <img src="assets/images/med.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-center">
             </a>
-          </div>
+        </div>
+        <ng-container *ngIf="utilisateurEstConnecte()">
+          <button type="submit" class="btn btn-primary btn-block mb-4" (click)="deconnexion()">Déconnexion</button>
+        </ng-container>
 
      </nav>
    </div>

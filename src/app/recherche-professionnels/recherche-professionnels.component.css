@@ -1,6 +1,23 @@
+
+h1{
+    background-color:#3780AA;
+    border: 35px;
+    color:white;
+    border-radius: 10px;
+    margin-left: 13%;
+    padding: 10px 0 10px 10px;
+    margin-right: 8%;
+    font-size: 70%;
+    font-weight: bold;
+
+}
 .card-deck {
+    padding-top:10px ;
     display: flex;
-    margin-left: 20px ;
+    margin-left: 10% ;
+    
+    /* width: 300px;
+    height: 900px;  */
 }
 
 .card-deck .card {

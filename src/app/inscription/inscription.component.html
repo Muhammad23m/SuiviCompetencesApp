@@ -1,0 +1,53 @@
+<h1>Bienvenue</h1>
+<h1 class="text">Inscription</h1>
+<section class="h-100 h-custom">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="main">
+      <div class="back">
+        <div class="card-body p-4 p-md-5">
+          <form class="px-md-2" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline datepicker">
+                  <input type="text" class="form-control" id="prenom" placeholder="Prénom" [(ngModel)]="utilisateur.prenom" name="prenom" required />
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline datepicker">
+                  <input type="text" class="form-control" id="nom" placeholder="Nom" [(ngModel)]="utilisateur.nom" name="nom" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-outline mb-4">
+              <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="utilisateur.email" name="email" required  />
+              <div *ngIf="emailNonUnique">Cet e-mail est déjà inscrit.</div>
+              </div>
+            <div class="form-outline mb-4">
+              <input type="text" id="contact" class="form-control" placeholder="Contact" [(ngModel)]="utilisateur.contact" name="contact" required />
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline datepicker">
+                  <input type="text" class="form-control" id="profession" placeholder="Profession" [(ngModel)]="utilisateur.profession" name="profession" required />
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-outline datepicker">
+                  <input type="password" class="form-control" id="motDepasse" placeholder="Mot de passe" [(ngModel)]="utilisateur.motDepasse" name="motDepasse" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+              <div class="col-md-6">
+                <div class="form-outline">
+                  <button type="submit"  class="btn">Valider</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

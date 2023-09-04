@@ -1,18 +1,18 @@
 .body img {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 590px;
     position: fixed;
-    right: 20px;
+    right: 8px;
     bottom: 0px;
 }
 p {
-    width: 550px;
+    width: 480px;
     height: 175px;
     top: 367px;
     left: 405px;
     color: #3780AA;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
-    margin-left: 35px;
+    margin-left: 12%;
 
 }

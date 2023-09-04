@@ -2,21 +2,14 @@
     width: calc(100% - 5rem);
     height: 20vh;
     margin-left: 5rem;
-    z-index: 0;
+   z-index: 0;
     position: relative;
     top: 0;
     transition: all .5s ease;
-    background: #f3f3f3; ;
+    background: #f3f3f3; ; 
     padding: 3rem;
 }
-.header-trimmed {
-    width: calc(100% - 15rem);
-    margin-left: 15rem;
-}
-.header-md-screen {
-    width: calc(100% - 5rem);
-    margin-left: 5rem;
-}
+
 
  form{
     margin-left: 10rem;
@@ -25,17 +18,7 @@ form input {
   width: 20rem;
   border-radius: 20px;
 }
-form .button {
-    background-color: aqua;
-    color: black;
-    border-radius: 10px;
-}
 
-form .button:hover {
-    background-color: #34303e;
-    color: #FFF;
-   
-}
 
 .navbar {
     display: flex;
@@ -43,5 +26,7 @@ form .button:hover {
 .profil {
     margin-top: 0px;
 }
-
+button {
+    background-color: #3780AA;
+}
  

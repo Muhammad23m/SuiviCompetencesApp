@@ -1,0 +1,23 @@
+ <h1>PROFILE UTILISATEUR</h1>
+ <div class="profile">
+    <div class="left">
+      <img src="assets/images/med.png" alt="User Image">
+      <p>{{ utilisateur?.nom }} {{ utilisateur?.prenom }}</p>
+      <p>{{ utilisateur?.profession }} </p>
+      <h3>Contact</h3>
+      <hr>
+      <p><i class="fa-solid fa-envelope-open-text"></i> {{ utilisateur?.email }} </p>
+    </div>
+    <div class="right">
+        <h2>Compétences</h2>
+        <div *ngFor="let competence of competences" class="skill">
+          <div class="skill-name">{{ competence.nom }}</div>
+          <div class="progress-bar">
+            <div class="progress" [style.width.%]="getProgressBarWidth(competence.niveau)"
+                 [style.backgroundColor]="getProgressBarColor(competence.niveau)">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+       

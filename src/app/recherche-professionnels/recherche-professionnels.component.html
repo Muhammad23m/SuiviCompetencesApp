@@ -1,4 +1,4 @@
-<div class="card-deck">
+<!-- <div class="card-deck">
     <div class="card">
       <img class="card-img-top" src="assets/images/med.png" alt="Card image cap">
       <div class="card-body">
@@ -31,5 +31,36 @@
         <button type="button" routerLink="profile-pro" class="small-button">plus d'info</button>
     </div>
     </div>
+</div> -->
+<h1>Autres</h1>
+<div class="card-deck">
+  <div *ngFor="let utilisateur of utilisateurs" class="card">
+    <img class="card-img-top" src="assets/images/med.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ utilisateur.nom }} {{ utilisateur.prenom }}</h5>
+      <p class="card-text">{{ utilisateur.profession }}</p>
+      <button type="button" class="small-button"><a [routerLink]="['../profile-pro', utilisateur.id]">plus d'info</a></button>
+    </div>
+  </div>
 </div>
- 
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div *ngFor="let utilisateur of utilisateurs" class="col-md-4">
+      <div class="card mb-4">
+        <img class="card-img-top" src="assets/images/med.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ utilisateur.nom }} {{ utilisateur.prenom }}</h5>
+          <p class="card-text">{{ utilisateur.profession }}</p>
+          <button type="button" class="small-button">
+            <a [routerLink]="['../profile-pro', utilisateur.id]">plus d'info</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+

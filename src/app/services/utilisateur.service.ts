@@ -1,17 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Competence } from '../models/competence.model';
-import { Utilisateur } from '../models/utilisateur.model'; // Assurez-vous d'adapter le chemin selon l'emplacement du modèle
+import { Utilisateur } from '../models/utilisateur.model'; 
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilisateurService {
+  rechercherUtilisateursParCompetence(nomCompetence: string): Utilisateur[] {
+    throw new Error('Method not implemented.');
+  }
+ 
   private utilisateur: Utilisateur = {
-    id: 1,
-    nom: 'Mohamed',
-    prenom: 'Diarra',
-    listeCompetence: []
+      id: 1,
+      nom: 'Mohamed',
+      prenom: 'Diarra',
+      profession: 'Developpeur',
+      motDepasse:'',
+      email:'',
+      listeCompetence: [],
+      contact: '71090098'
   };
 
   getUtilisateur(): Utilisateur {
@@ -36,3 +44,5 @@ export class UtilisateurService {
     }
   }
 }
+export { Utilisateur };
+

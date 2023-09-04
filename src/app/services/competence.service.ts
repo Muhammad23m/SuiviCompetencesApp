@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Competence } from '../models/competence.model'; // Assurez-vous que le chemin vers le modèle est correct
-
+import { Competence } from '../models/competence.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,10 +9,10 @@ export class CompetenceService {
   constructor() {
     // Exemple d'initialisation de la liste des compétences
     this.competences = [
-      { id: 1, nom: 'JavaScript', niveau: 'Avancé' },
-      { id: 2, nom: 'Java', niveau: 'Intermédiaire' },
-      { id: 3, nom: 'C++', niveau: 'Avancé' },
-      { id: 4, nom: 'C#', niveau: 'Intermédiaire' }
+      { id: 1, nom: 'JavaScript', niveau: 'débutant' },
+      { id: 2, nom: 'Java', niveau: 'senior' },
+      { id: 3, nom: 'C++', niveau: 'junior' },
+      { id: 4, nom: 'C#', niveau: 'senior' }
     ];
   }
 
